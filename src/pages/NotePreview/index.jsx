@@ -1,9 +1,12 @@
 import { Container } from "./styles";
+import { Header } from '../../components/Header'
 
 export function NotePreview() {
   return (
     <Container>
-      <h1>Hello World</h1>
+      <Header  />
+      <h1>My Movies</h1>
+
     </Container>
   );
 }
