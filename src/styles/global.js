@@ -15,7 +15,7 @@ body{
 
 body, button, input, textarea {
   font-family: 'Roboto Slab', serif;
-  font-size: 16px;
+  font-size: 14px;
   outline: none;
 }
 
