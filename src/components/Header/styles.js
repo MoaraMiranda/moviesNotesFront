@@ -2,9 +2,11 @@ import styled from "styled-components";
 
 export const Container = styled.div`
   display: flex;
-  justify-content: space-between;
-  padding: 24px 124px;
-  
+  gap: 64px;
+  justify-content: center;
+  align-items: center;
+  padding: 24px;
+
   > h1 {
     color: ${({ theme }) => theme.COLORS.PINK_300};
   }
@@ -13,7 +15,6 @@ export const Container = styled.div`
     display: flex;
     gap: 9px;
     align-items: center;
-    justify-items: right;
 
     > div {
       display: flex;
@@ -23,6 +24,7 @@ export const Container = styled.div`
       h3 {
         font-size: 14px;
         font-weight: 700;
+        text-align: right;
       }
 
       p {
@@ -36,6 +38,5 @@ export const Container = styled.div`
       height: 64px;
       border-radius: 50%;
     }
-
   }
 `;
