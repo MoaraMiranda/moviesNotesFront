@@ -1,11 +1,15 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
+  grid-area: header;
+  height: 105px;
+  width: 100%;
   display: flex;
   gap: 64px;
   justify-content: center;
   align-items: center;
   padding: 24px;
+  border-bottom: 1px solid ${({ theme }) => theme.COLORS.GRAY_300};
 
   > h1 {
     color: ${({ theme }) => theme.COLORS.PINK_300};
