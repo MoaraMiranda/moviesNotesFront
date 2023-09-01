@@ -19,6 +19,10 @@ body, button, input, textarea {
   outline: none;
 }
 
+button, input {
+  border-radius: 10px;
+}
+
 a{
   text-decoration: none;
 }
