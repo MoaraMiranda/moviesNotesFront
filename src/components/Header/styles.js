@@ -8,7 +8,6 @@ export const Container = styled.div`
   gap: 64px;
   justify-content: center;
   align-items: center;
-  padding: 24px;
   border-bottom: 1px solid ${({ theme }) => theme.COLORS.GRAY_300};
 
   > h1 {

@@ -1,8 +1,8 @@
 import { Container, Content, PostInfo } from "./styles";
-import { BiTime, BiArrowBack, BiStar, BiSolidStar } from "react-icons/bi";
+import { BiTime, BiArrowBack } from "react-icons/bi";
 import { BackLink } from "../../components/BackLink";
 import { Header } from "../../components/Header";
-import { Section } from "../../components/Section";
+import { PageTitle } from "../../components/PageTitle";
 import { TagsGroup } from "../../components/TagsGroup";
 import { Rating } from "../../components/Rating";
 
@@ -13,9 +13,9 @@ export function NotePreview() {
       <main>
         <Content>
           <BackLink icon={BiArrowBack} />
-          <Section title="Titanic">
+          <PageTitle title="Titanic" buttonTitle="Delete Movie">
             <Rating rating={3} />
-          </Section>
+          </PageTitle>
           <PostInfo>
             <img src="https://github.com/moaramiranda.png" alt="user picture" />
             <span>By Moara Miranda </span> <BiTime />
