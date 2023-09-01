@@ -12,15 +12,18 @@ export const Container = styled.section`
     font-weight: 500;
     margin-right: 20px;
   }
-  > svg {
-    color: ${({ theme }) => theme.COLORS.PINK_300};
-    margin-right: 10px;
-  }
+
   > button {
     color: ${({ theme }) => theme.COLORS.PINK_300};
     background-color: ${({ theme }) => theme.COLORS.GRAY_300};
     border:  none;
-    padding:  14px;   
+    padding:  14px;
+    font-size: 16px;
+
+    > svg {
+      color: ${({ theme }) => theme.COLORS.PINK_300};
+      margin-right: 8px;
+    }
   }
 
   > div{
