@@ -33,12 +33,16 @@ export const Content = styled.div`
     margin-bottom: 20px;
     line-height: 28px;
   }
+  > article {
+    margin-top: 40px;
+  }
 `;
 
 export const PostInfo = styled.div`
   display: flex;
   align-items: center;
   gap: 8px;
+  margin-bottom: 40px;
 
   svg {
     color: ${({ theme }) => theme.COLORS.PINK_300};
