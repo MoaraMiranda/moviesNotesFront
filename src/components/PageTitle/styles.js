@@ -1,7 +1,6 @@
 import styled from "styled-components";
 
 export const Container = styled.section`
-  margin: 24px 0;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -16,8 +15,8 @@ export const Container = styled.section`
   > button {
     color: ${({ theme }) => theme.COLORS.PINK_300};
     background-color: ${({ theme }) => theme.COLORS.GRAY_300};
-    border:  none;
-    padding:  14px;
+    border: none;
+    padding: 14px;
     font-size: 16px;
 
     > svg {
@@ -26,7 +25,7 @@ export const Container = styled.section`
     }
   }
 
-  > div{
-    flex:1;
+  > div {
+    flex: 1;
   }
 `;

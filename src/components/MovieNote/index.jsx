@@ -1,13 +1,13 @@
 import { Container } from "./styles";
-import { Rating } from "../Rating"
-import { TagsGroup } from "../TagsGroup"
+import { Rating } from "../Rating";
+import { TagsGroup } from "../TagsGroup";
 
-export function MovieNote({ title, ...rest }) {
+export function MovieNote({ title, rating, ...rest }) {
   return (
     <Container {...rest}>
       <div>
         <h2>{title}</h2>
-        <Rating />
+        <Rating rating={rating} />
       </div>
       <p>
         Pragas nas colheitas fizeram a civilização humana regredir para uma
@@ -24,4 +24,5 @@ export function MovieNote({ title, ...rest }) {
       </p>
       <TagsGroup />
     </Container>
-  );}
+  );
+}

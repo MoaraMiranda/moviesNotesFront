@@ -13,13 +13,14 @@ export const Container = styled.div`
   > main {
     grid-area: content;
     padding: 0 120px;
-    margin-top: 40px;
+    margin-top: 50px;
     overflow-y: scroll;
   }
 `;
 
 export const Content = styled.div`
-display: flex;
-flex-direction: column;
-gap: 24px
-`; 
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  margin-top: 40px;
+`;

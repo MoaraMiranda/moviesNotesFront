@@ -11,9 +11,9 @@ export function Home() {
       <main>
         <PageTitle title="My Movies" buttonTitle="Add Movie" icon={FaPlus} />
         <Content>
-          <MovieNote title="Interestelar" />
-          <MovieNote title="Titanic" />
-          <MovieNote title="Beauty and the Beast" />
+          <MovieNote title="Interestelar" rating={3} />
+          <MovieNote title="Titanic" rating={4} />
+          <MovieNote title="Beauty and the Beast" rating={5} />
         </Content>
       </main>
     </Container>
