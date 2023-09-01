@@ -19,6 +19,7 @@ export const Container = styled.div`
 `;
 
 export const Content = styled.div`
-  background-color: red;
- 
-`;
+display: flex;
+flex-direction: column;
+gap: 24px
+`; 
