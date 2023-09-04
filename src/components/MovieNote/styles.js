@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-  background-color: ${({ theme }) => theme.COLORS.PINK_100};
+  background-color: ${({ theme }) => theme.COLORS.GRAY_300};
   border-radius: 10px;
   padding: 32px;
   display: flex;

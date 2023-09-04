@@ -45,7 +45,6 @@ export function NotePreview() {
               realidade uma enorme estação espacial. A partida de Cooper devasta
               Murphy.
             </p>
-            <br />
             <p>
               Além de Cooper, a tripulação da Endurance é formada pela bióloga
               Amelia, filha de Brand; o cientista Romilly, o físico planetário

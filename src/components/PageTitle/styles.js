@@ -22,12 +22,12 @@ export const Container = styled.section`
     font-size: 16px;
 
     > svg {
-      color: ${({ theme }) => theme.COLORS.PINK_300};
+      color: ${({ theme }) => theme.COLORS.GRAY_300};
       margin-right: 8px;
     }
   }
-  /* TODO - checar se esse flex 1 era necessario realmente */
-  /* > div {
+  /* Flex 1 - necessary for Rating component position */
+  > div {
     flex: 1;
-  } */
+  }
 `;

@@ -9,7 +9,12 @@ export function Home() {
     <Container>
       <Header />
       <main>
-        <PageTitle title="My Movies" buttonTitle="Add Movie" icon={FaPlus} />
+        <PageTitle
+          title="My Movies"
+          buttonTitle="Add Movie"
+          icon={FaPlus}
+          bgPink
+        />
         <Content>
           <MovieNote title="Interestelar" rating={3} />
           <MovieNote title="Titanic" rating={4} />
