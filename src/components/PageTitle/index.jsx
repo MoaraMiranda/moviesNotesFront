@@ -1,8 +1,14 @@
 import { Container } from "./styles";
 
-export function PageTitle({ title, children, buttonTitle, icon: Icon }) {
+export function PageTitle({
+  title,
+  children,
+  buttonTitle,
+  icon: Icon,
+  bgPink,
+}) {
   return (
-    <Container>
+    <Container bgPink={bgPink}>
       <h2>{title}</h2>
       <div>{children}</div>
       <button>

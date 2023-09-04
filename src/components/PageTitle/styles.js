@@ -13,8 +13,10 @@ export const Container = styled.section`
   }
 
   > button {
-    color: ${({ theme }) => theme.COLORS.PINK_300};
-    background-color: ${({ theme }) => theme.COLORS.GRAY_300};
+    color: ${({ theme, bgPink }) =>
+      bgPink ? theme.COLORS.GRAY_300 : theme.COLORS.PINK_300};
+    background-color: ${({ theme, bgPink }) =>
+      bgPink ? theme.COLORS.PINK_300 : theme.COLORS.GRAY_300};
     border: none;
     padding: 14px;
     font-size: 16px;
@@ -24,8 +26,8 @@ export const Container = styled.section`
       margin-right: 8px;
     }
   }
-
-  > div {
+  /* TODO - checar se esse flex 1 era necessario realmente */
+  /* > div {
     flex: 1;
-  }
+  } */
 `;
