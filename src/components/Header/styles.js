@@ -9,6 +9,7 @@ export const Container = styled.div`
   justify-content: center;
   align-items: center;
   border-bottom: 1px solid ${({ theme }) => theme.COLORS.GRAY_300};
+  padding: 0 120px;
 
   > h1 {
     color: ${({ theme }) => theme.COLORS.PINK_300};
