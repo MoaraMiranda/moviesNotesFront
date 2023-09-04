@@ -8,13 +8,14 @@ export const Container = styled.div`
   display: flex;
   align-items: center;
   flex: 1;
+  /* height: 56px; */
 
   > input {
+    height: 56px;
     width: 100%;
-    height: 100%;
     padding: 20px;
-    background-color: transparent;
     color: ${({ theme }) => theme.COLORS.WHITE};
+    background-color: transparent;
     border: none;
 
     &::placeholder {

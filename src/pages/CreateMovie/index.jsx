@@ -12,7 +12,7 @@ export function CreateMovie() {
     <Container>
       <Header />
       <main>
-        <BackLink icon={BiArrowBack} />
+        <BackLink title="Back" icon={BiArrowBack} />
         <PageTitle title="New Movie" buttonTitle="Save" bgPink />
         <form>
           <Fieldset>
