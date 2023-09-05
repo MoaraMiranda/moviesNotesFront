@@ -12,10 +12,13 @@ export function PageTitle({
     <Container>
       <h2>{title}</h2>
       <div>{children}</div>
-      <Button bgPink={bgPink} to={route}>
-        {Icon && <Icon size={14} />}
-        {buttonTitle}
-      </Button>
+
+      {buttonTitle && (
+        <Button bgPink={bgPink} to={route}>
+          {Icon && <Icon size={14} />}
+          {buttonTitle}
+        </Button>
+      )}
     </Container>
   );
 }

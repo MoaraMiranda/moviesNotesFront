@@ -12,7 +12,7 @@ export function NotePreview() {
       <Header />
       <main>
         <Content>
-          <BackLink title="Back" icon={BiArrowBack} />
+          <BackLink title="Back" icon={BiArrowBack} route="/" />
           <PageTitle title="Titanic" buttonTitle="Delete Movie">
             <Rating rating={3} />
           </PageTitle>

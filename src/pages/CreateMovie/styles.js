@@ -77,3 +77,19 @@ export const Fieldset = styled.fieldset`
     gap: 40px;
   }
 `;
+
+export const Button = styled.div`
+  display: flex;
+  justify-content: end;
+
+  > button {
+    font-size: 20px;
+    font-weight: 500;
+    padding: 12px;
+    width: 100%;
+    background-color: ${({ theme }) => theme.COLORS.PINK_300};
+    color: ${({ theme }) => theme.COLORS.GRAY_300};
+    border: none;
+    flex: 1;
+  }
+`;
