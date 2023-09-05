@@ -9,7 +9,7 @@ export function Profile() {
   return (
     <Container>
       <header>
-        <BackLink title="Back" icon={BiArrowBack} route="/"/>
+        <BackLink title="Back" icon={BiArrowBack} route="/" />
       </header>
       <Form>
         <Avatar className="logo">

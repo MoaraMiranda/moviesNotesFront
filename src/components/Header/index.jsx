@@ -1,19 +1,24 @@
 import { FiSearch } from "react-icons/fi";
-import { Container } from "./styles";
+import { Link } from "react-router-dom";
+import { Container, Profile, Brand } from "./styles";
 import { Input } from "../Input";
 
 export function Header() {
   return (
     <Container>
-      <h1>MovieMemos</h1>
+      <Brand to="/">
+        <h1>MovieMemos</h1>
+      </Brand>
       <Input type="text" placeholder="Search by title" icon={FiSearch} />
-      <section>
-        <div>
+      <Profile>
+        <Link to="#">
           <h3>Moara Miranda</h3>
           <p>logout</p>
-        </div>
-        <img src="https://github.com/moaramiranda.png" alt="user picture" />
-      </section>
+        </Link>
+        <Link to="/profile">
+          <img src="https://github.com/moaramiranda.png" alt="user picture" />
+        </Link>
+      </Profile>
     </Container>
   );
 }

@@ -17,9 +17,9 @@ export function Home() {
           route="/new"
         />
         <Content>
-          <MovieNote title="Interestelar" rating={3} />
-          <MovieNote title="Titanic" rating={4} />
-          <MovieNote title="Beauty and the Beast" rating={5} />
+          <MovieNote title="Interestelar" rating={3} route="/" />
+          <MovieNote title="Titanic" rating={4} route="/" />
+          <MovieNote title="Beauty and the Beast" rating={5} route="/" />
         </Content>
       </main>
     </Container>

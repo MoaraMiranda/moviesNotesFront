@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 
 export const Container = styled.div`
   grid-area: header;
@@ -10,37 +11,43 @@ export const Container = styled.div`
   align-items: center;
   border-bottom: 1px solid ${({ theme }) => theme.COLORS.GRAY_300};
   padding: 0 120px;
+`;
 
-  > h1 {
-    color: ${({ theme }) => theme.COLORS.PINK_300};
-  }
 
-  > section {
+export const Profile = styled.div`
+  display: flex;
+  gap: 9px;
+  align-items: center;
+  cursor: pointer;
+
+  > a {
     display: flex;
-    gap: 9px;
-    align-items: center;
+    flex-direction: column;
+    align-items: end;
+    color: ${({ theme }) => theme.COLORS.GRAY_100};
 
-    > div {
-      display: flex;
-      flex-direction: column;
-      align-items: end;
-
-      h3 {
-        font-size: 14px;
-        font-weight: 700;
-        text-align: right;
-      }
-
-      p {
-        font-size: 14px;
-        font-weight: 400;
-        color: ${({ theme }) => theme.COLORS.GRAY_200};
-      }
+    h3 {
+      font-size: 14px;
+      font-weight: 700;
+      text-align: right;
     }
+
+    p {
+      font-size: 14px;
+      font-weight: 400;
+    }
+    
     > img {
       width: 64px;
       height: 64px;
       border-radius: 50%;
     }
+  }
+  
+`;
+export const Brand = styled(Link)`
+  > h1 {
+    font-size: 30px;
+    color: ${({ theme }) => theme.COLORS.PINK_300};
   }
 `;
