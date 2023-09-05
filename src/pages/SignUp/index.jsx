@@ -20,7 +20,7 @@ export function SignUp() {
           <Input placeholder="Password" icon={FiLock} type="password" />
           <Button title="Register" />
         </div>
-        <BackLink title="Back to Login" icon={BiArrowBack} />
+        <BackLink title="Back to Login" icon={BiArrowBack} route={"/"} />
       </Form>
       <Background />
     </Container>

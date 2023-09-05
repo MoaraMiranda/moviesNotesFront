@@ -14,6 +14,7 @@ export function Home() {
           buttonTitle="Add Movie"
           icon={FaPlus}
           bgPink
+          route="/new"
         />
         <Content>
           <MovieNote title="Interestelar" rating={3} />

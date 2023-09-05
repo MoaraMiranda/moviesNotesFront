@@ -1,8 +1,7 @@
+import { BiArrowBack } from "react-icons/bi";
+import { Container, Textarea, Fieldset } from "./styles";
 import { Header } from "../../components/Header";
 import { BackLink } from "../../components/BackLink";
-
-import { Container, Textarea, Fieldset } from "./styles";
-import { BiArrowBack } from "react-icons/bi";
 import { Input } from "../../components/Input";
 import { TagsController } from "../../components/TagsController";
 import { PageTitle } from "../../components/PageTitle";
@@ -12,8 +11,9 @@ export function CreateMovie() {
     <Container>
       <Header />
       <main>
-        <BackLink title="Back" icon={BiArrowBack} />
-        <PageTitle title="New Movie" buttonTitle="Save" bgPink />
+        <BackLink title="Back" icon={BiArrowBack} route={"/"} />
+        {/* todo - arrumar css botao */}
+        <PageTitle title="New Movie" buttonTitle="Save" bgPink route="" />
         <form>
           <Fieldset>
             <div className="input-wrapper">

@@ -1,12 +1,13 @@
 import { Container } from "./styles";
+import { Link } from "react-router-dom";
 
-export function BackLink({ title, icon: Icon }) {
+export function BackLink({ title, icon: Icon, route }) {
   return (
     <Container>
-      <a href="/">
+      <Link to={route}>
         <Icon size={16} />
         {title}
-      </a>
+      </Link>
     </Container>
   );
 }
