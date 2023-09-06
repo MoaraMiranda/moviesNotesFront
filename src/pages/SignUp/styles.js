@@ -4,6 +4,7 @@ import backgroundImg from "../../assets/backgroundImg.png";
 export const Container = styled.div`
   height: 100vh;
   display: flex;
+  overflow-y: auto;
 `;
 
 export const Form = styled.form`

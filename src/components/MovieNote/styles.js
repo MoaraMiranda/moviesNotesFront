@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const Container = styled.div`
   a {
     background-color: ${({ theme }) => theme.COLORS.GRAY_300};
-    border-radius: 10px;
+    border-radius: ${({ theme }) => theme.RADIUS.MD};
     padding: 32px;
     display: flex;
     flex-direction: column;

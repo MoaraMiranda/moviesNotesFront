@@ -9,7 +9,7 @@ export const Container = styled.div`
   color: ${({ theme }) => theme.COLORS.GRAY_200};
   border: ${({ theme, isNew }) =>
     isNew ? `1px dashed ${theme.COLORS.GRAY_200}` : "none"};
-  border-radius: 10px;
+  border-radius: ${({ theme }) => theme.RADIUS.MD};
 
   > button {
     border: none;

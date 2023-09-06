@@ -1,22 +1,15 @@
 import { Container, Button } from "./styles";
 
-export function PageTitle({
-  title,
-  children,
-  buttonTitle,
-  icon: Icon,
-  bgPink,
-  route,
-}) {
+export function PageTitle({ title, children, button }) {
   return (
     <Container>
       <h2>{title}</h2>
       <div>{children}</div>
 
-      {buttonTitle && (
-        <Button bgPink={bgPink} to={route}>
-          {Icon && <Icon size={14} />}
-          {buttonTitle}
+      {button && (
+        <Button $bgPink={button.bgPink} to={button.route}>
+          {button.Icon && <button.Icon size={14} />}
+          {button.title}
         </Button>
       )}
     </Container>

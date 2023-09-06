@@ -17,7 +17,7 @@ export const Container = styled.div`
     flex-wrap: wrap;
     background-color: ${({ theme }) => theme.COLORS.BLACK};
     padding: 16px;
-    border-radius: 10px;
+    border-radius: ${({ theme }) => theme.RADIUS.MD};
   }
 
   .input-wrapper {
@@ -26,9 +26,8 @@ export const Container = styled.div`
 
   > main {
     grid-area: content;
-    padding: 0 120px;
-    margin-top: 50px;
-    overflow-y: scroll;
+    padding: 40px 120px 0;
+    overflow-y: auto;
 
     h2 {
       margin-top: 24px;
@@ -50,7 +49,8 @@ export const Textarea = styled.textarea`
   border: none;
   resize: none;
   margin-bottom: 40px;
-  border-radius: 10px;
+  border-radius: ${({ theme }) => theme.RADIUS.MD};
+
   padding: 16px;
 
   &::placeholder {

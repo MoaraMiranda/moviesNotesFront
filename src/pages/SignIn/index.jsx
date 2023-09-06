@@ -12,7 +12,7 @@ export function SignIn() {
           <h1>MovieMemos</h1>
           <p>Take notes from your favorite movies</p>
         </div>
-        <h2>Sing in here</h2>
+        <h2>Sign in here</h2>
         <div className="input-wrapper">
           <Input placeholder="Email" icon={FiMail} type="text" />
           <Input placeholder="Password" icon={FiLock} type="password" />

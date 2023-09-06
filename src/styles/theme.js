@@ -11,4 +11,9 @@ export default {
     PINK_300: "#FF859B",
     PINK_100: "rgba(255, 133, 155, 0.05)",
   },
+  RADIUS: {
+    FULL: '100%',
+    MD: "10px",
+    SM: "8px"
+  },
 };

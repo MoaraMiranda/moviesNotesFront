@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 export const Container = styled.div`
   height: 100vh;
+  overflow-y: auto;
 
   > header {
     width: 100%;
@@ -40,14 +41,14 @@ export const Avatar = styled.div`
   > img {
     width: 186;
     height: 186px;
-    border-radius: 50%;
+    border-radius: ${({ theme }) => theme.RADIUS.FULL};
   }
 
   > label {
     width: 48px;
     height: 48px;
     background-color: ${({ theme }) => theme.COLORS.PINK_300};
-    border-radius: 50%;
+    border-radius: ${({ theme }) => theme.RADIUS.FULL};
     display: flex;
     align-items: center;
     justify-content: center;

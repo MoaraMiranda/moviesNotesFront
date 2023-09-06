@@ -12,7 +12,6 @@ export function CreateMovie() {
       <Header />
       <main>
         <BackLink title="Back" icon={BiArrowBack} route={"/"} />
-        {/* todo - arrumar css botao */}
         <PageTitle title="New Movie" />
         <form>
           <Fieldset>
@@ -26,7 +25,7 @@ export function CreateMovie() {
             <legend>Tags</legend>
             <div className="tags">
               <TagsController value="Romance" />
-              <TagsController isNew placeholder="New Tag" />
+              <TagsController $isNew placeholder="New Tag" />
             </div>
             <Button>
               <button>Save your movie</button>

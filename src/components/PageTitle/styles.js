@@ -20,14 +20,14 @@ export const Container = styled.section`
 `;
 
 export const Button = styled(Link)`
-  color: ${({ theme, bgPink }) =>
-    bgPink ? theme.COLORS.GRAY_300 : theme.COLORS.PINK_300};
-  background-color: ${({ theme, bgPink }) =>
-    bgPink ? theme.COLORS.PINK_300 : theme.COLORS.GRAY_300};
+  color: ${({ theme, $bgPink }) =>
+    $bgPink ? theme.COLORS.GRAY_300 : theme.COLORS.PINK_300};
+  background-color: ${({ theme, $bgPink }) =>
+    $bgPink ? theme.COLORS.PINK_300 : theme.COLORS.GRAY_300};
   border: none;
   padding: 14px;
   font-size: 16px;
-  border-radius: 10px;
+  border-radius: ${({ theme }) => theme.RADIUS.MD};
 
   > svg {
     color: ${({ theme }) => theme.COLORS.GRAY_300};

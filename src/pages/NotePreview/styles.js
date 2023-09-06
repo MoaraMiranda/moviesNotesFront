@@ -14,7 +14,7 @@ export const Container = styled.div`
     grid-area: content;
     padding: 0 120px;
     margin-top: 40px;
-    overflow-y: scroll;
+    overflow-y: auto;
   }
 `;
 
@@ -55,6 +55,6 @@ export const PostInfo = styled.div`
   > img {
     width: 16px;
     height: 16px;
-    border-radius: 50%;
+    border-radius: ${({ theme }) => theme.RADIUS.FULL};
   }
 `;

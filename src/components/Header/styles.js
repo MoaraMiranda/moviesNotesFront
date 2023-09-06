@@ -13,7 +13,6 @@ export const Container = styled.div`
   padding: 0 120px;
 `;
 
-
 export const Profile = styled.div`
   display: flex;
   gap: 9px;
@@ -36,14 +35,13 @@ export const Profile = styled.div`
       font-size: 14px;
       font-weight: 400;
     }
-    
+
     > img {
       width: 64px;
       height: 64px;
-      border-radius: 50%;
+      border-radius: ${({ theme }) => theme.RADIUS.FULL};
     }
   }
-  
 `;
 export const Brand = styled(Link)`
   > h1 {

@@ -11,18 +11,20 @@ export function Home() {
       <main>
         <PageTitle
           title="My Movies"
-          buttonTitle="Add Movie"
-          icon={FaPlus}
-          bgPink
-          route="/new"
+          button={{
+            title: "Add Movie",
+            Icon: FaPlus,
+            bgPink: true,
+            route: "/new",
+          }}
         />
         <Content>
           <MovieNote title="Interestelar" rating={3} route="/preview/2" />
-          <MovieNote title="Titanic" rating={4} route="/preview/" />
+          <MovieNote title="Titanic" rating={4} route="/preview/3" />
           <MovieNote
             title="Beauty and the Beast"
             rating={5}
-            route="/preview/"
+            route="/preview/4"
           />
         </Content>
       </main>

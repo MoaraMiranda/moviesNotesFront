@@ -13,7 +13,14 @@ export function NotePreview() {
       <main>
         <Content>
           <BackLink title="Back" icon={BiArrowBack} route="/" />
-          <PageTitle title="Titanic" buttonTitle="Delete Movie">
+          <PageTitle
+            title="Titanic"
+            button={{
+              title: "Delete Movie",
+              bgPink: false,
+              route: "#",
+            }}
+          >
             <Rating rating={3} />
           </PageTitle>
           <PostInfo>

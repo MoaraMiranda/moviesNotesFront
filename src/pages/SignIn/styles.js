@@ -4,6 +4,7 @@ import backgroundImg from "../../assets/backgroundImg.png";
 export const Container = styled.div`
   height: 100vh;
   display: flex;
+  overflow-y: auto;
 `;
 
 export const Form = styled.form`
@@ -23,6 +24,7 @@ export const Form = styled.form`
     margin-top: 48px;
     color: ${({ theme }) => theme.COLORS.PINK_300};
     text-align: center;
+    font-size: 16px;
   }
 
   .logo {
