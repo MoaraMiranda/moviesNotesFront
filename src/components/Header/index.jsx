@@ -2,8 +2,10 @@ import { FiSearch } from "react-icons/fi";
 import { Link } from "react-router-dom";
 import { Container, Profile, Brand } from "./styles";
 import { Input } from "../Input";
+import { useAuth } from "../../hooks/auth"
 
 export function Header() {
+  const { signOut } = useAuth()
   return (
     <Container>
       <Brand to="/">
@@ -11,7 +13,7 @@ export function Header() {
       </Brand>
       <Input type="text" placeholder="Search by title" icon={FiSearch} />
       <Profile>
-        <Link to="#">
+        <Link to="#" onClick={signOut}>
           <h3>Moara Miranda</h3>
           <p>logout</p>
         </Link>
