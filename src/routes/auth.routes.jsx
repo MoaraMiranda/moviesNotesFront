@@ -2,6 +2,7 @@ import { Routes, Route } from "react-router-dom";
 
 import { SignIn } from "../pages/SignIn";
 import { SignUp } from "../pages/SignUp";
+import { AppError } from "../pages/AppError";
 
 export function AuthRoutes() {
   return (
