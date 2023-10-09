@@ -39,8 +39,9 @@ export const Avatar = styled.div`
   height: 186px;
 
   > img {
-    width: 186;
+    min-width: 186px;
     height: 186px;
+    object-fit: cover;
     border-radius: ${({ theme }) => theme.RADIUS.FULL};
   }
 
@@ -49,6 +50,7 @@ export const Avatar = styled.div`
     height: 48px;
     background-color: ${({ theme }) => theme.COLORS.PINK_300};
     border-radius: ${({ theme }) => theme.RADIUS.FULL};
+    border: 1px solid ${({ theme }) => theme.COLORS.GRAY_300};
     display: flex;
     align-items: center;
     justify-content: center;

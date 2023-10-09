@@ -40,6 +40,7 @@ export const Profile = styled.div`
       width: 64px;
       height: 64px;
       border-radius: ${({ theme }) => theme.RADIUS.FULL};
+      object-fit: cover;
     }
   }
 `;

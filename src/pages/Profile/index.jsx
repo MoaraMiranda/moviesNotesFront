@@ -6,6 +6,8 @@ import { Input } from "../../components/Input";
 import { Button } from "../../components/Button";
 import { BackLink } from "../../components/BackLink";
 import { useAuth } from "../../hooks/auth.jsx";
+import avatarPlaceholder from "../../assets/avatarPlaceholder.png";
+import { api } from "../../services/api";
 
 export function Profile() {
   const { user, updateProfile } = useAuth();
@@ -13,6 +15,12 @@ export function Profile() {
   const [email, setEmail] = useState(user.email);
   const [passwordOld, setPasswordOld] = useState();
   const [passwordNew, setPasswordNew] = useState();
+
+  const avatarUrl = user.avatar
+    ? `${api.defaults.baseURL}/files/${user.avatar}`
+    : avatarPlaceholder;
+  const [avatar, setAvatar] = useState(avatarUrl);
+  const [avatarFile, setAvatarFile] = useState(null);
 
   async function handleUpdate() {
     const user = {
@@ -22,9 +30,16 @@ export function Profile() {
       currentPassword: passwordOld,
     };
 
-    await updateProfile({ user });
+    await updateProfile({ user, avatarFile });
   }
 
+  function handleChangeAvatar(event) {
+    const file = event.target.files[0];
+    setAvatarFile(file);
+
+    const imagePreview = URL.createObjectURL(file);
+    setAvatar(imagePreview);
+  }
   return (
     <Container>
       <header>
@@ -32,10 +47,10 @@ export function Profile() {
       </header>
       <Form>
         <Avatar className="logo">
-          <img src="https://github.com/moaramiranda.png" alt="User picture" />
+          <img src={avatar} alt="User picture" />
           <label htmlFor="avatar">
             <FiCamera />
-            <input id="avatar" type="file" />
+            <input id="avatar" type="file" onChange={handleChangeAvatar} />
           </label>
         </Avatar>
         <div className="input-wrapper">
