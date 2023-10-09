@@ -27,7 +27,6 @@ export function SignUp() {
       })
       .catch((error) => {
         if (error.response) {
-          console.log("entrou aqui", error.response.data);
           alert(error.response.data.message);
         } else {
           alert("It was not possible register user");

@@ -14,15 +14,15 @@ export function Profile() {
   const [passwordOld, setPasswordOld] = useState();
   const [passwordNew, setPasswordNew] = useState();
 
-  async function handleUpdate(){
+  async function handleUpdate() {
     const user = {
       name,
       email,
       newPassword: passwordNew,
-      currentPassword: passwordOld
-    }
-    
-    await updateProfile({ user })
+      currentPassword: passwordOld,
+    };
+
+    await updateProfile({ user });
   }
 
   return (
