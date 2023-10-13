@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { useSearchParams } from "react-router-dom";
 
 import { Header } from "../../components/Header";
 import { MovieNote } from "../../components/MovieNote";
@@ -6,21 +7,21 @@ import { PageTitle } from "../../components/PageTitle";
 import { Container, Content } from "./styles";
 import { FaPlus } from "react-icons/fa";
 import { api } from "../../services/api";
-import { useSearchParams } from "react-router-dom";
 
 export function Home() {
   const [notes, setNotes] = useState([]);
   const [params] = useSearchParams();
-  const title = params.get("title") || "";
+  const search = params.get("search") || "";
 
   useEffect(() => {
     async function fetchMovies() {
-      const response = await api.get(`/movieNotes?title=${title}`);
+      const response = await api.get(`/movieNotes?search=${search}`);
       setNotes(response.data);
     }
 
     fetchMovies();
-  }, [title]);
+  }, [search]);
+
   return (
     <Container>
       <Header />

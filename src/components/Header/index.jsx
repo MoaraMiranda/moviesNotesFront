@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { useSearchParams } from "react-router-dom";
 import { FiSearch } from "react-icons/fi";
 import { Link, useNavigate } from "react-router-dom";
 import { Container, Profile, Brand } from "./styles";
@@ -8,7 +9,9 @@ import { api } from "../../services/api";
 import avatarPlaceholder from "../../assets/avatarPlaceholder.png";
 
 export function Header() {
-  const [search, setSearch] = useState("");
+  const [params] = useSearchParams();
+  const searchUrl = params.get("search") || "";
+  const [search, setSearch] = useState(searchUrl);
 
   const navigate = useNavigate();
   const { signOut, user } = useAuth();
@@ -19,7 +22,7 @@ export function Header() {
 
   function handleSearch(e) {
     e.preventDefault();
-    navigate(`/?title=${search}`);
+    navigate(`/?search=${search}`);
   }
 
   return (
@@ -30,9 +33,10 @@ export function Header() {
       <form onSubmit={handleSearch}>
         <Input
           type="text"
-          placeholder="Search by title"
+          placeholder="Search"
           icon={FiSearch}
           onChange={(e) => setSearch(e.target.value)}
+          value={search}
         />
       </form>
       <Profile>
