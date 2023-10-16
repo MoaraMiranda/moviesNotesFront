@@ -16,6 +16,11 @@ export function Header() {
   const navigate = useNavigate();
   const { signOut, user } = useAuth();
 
+  function handleSignOut(e) {
+    e.preventDefault()
+    navigate("/");
+    signOut();
+  }
   const avatarUrl = user.avatar
     ? `${api.defaults.baseURL}/files/${user.avatar}`
     : avatarPlaceholder;
@@ -40,7 +45,7 @@ export function Header() {
         />
       </form>
       <Profile>
-        <Link to="#" onClick={signOut}>
+        <Link to="#" onClick={handleSignOut}>
           <h3>{user.name}</h3>
           <p>logout</p>
         </Link>

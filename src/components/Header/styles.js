@@ -7,10 +7,14 @@ export const Container = styled.div`
   width: 100%;
   display: flex;
   gap: 64px;
-  justify-content: center;
+  justify-content: space-between;
+  padding: 0 120px 0;
   align-items: center;
   border-bottom: 1px solid ${({ theme }) => theme.COLORS.GRAY_300};
-  padding: 0 120px;
+
+  > form {
+    flex: 1;
+  }
 `;
 
 export const Profile = styled.div`
