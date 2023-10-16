@@ -14,7 +14,8 @@ export function SignUp() {
   const [password, setPassword] = useState("");
   const navigate = useNavigate();
 
-  function handleSignUp() {
+  function handleSignUp(e) {
+    e.preventDefault();
     if (!name || !email || !password) {
       return alert("Please fill out all fields.");
     }
@@ -27,9 +28,9 @@ export function SignUp() {
       })
       .catch((error) => {
         if (error.response) {
-          alert(error.response.data.message);
+          return alert(error.response.data.message);
         } else {
-          alert("It was not possible register user");
+          return alert("It was not possible register user");
         }
       });
   }

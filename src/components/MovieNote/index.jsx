@@ -13,7 +13,7 @@ export function MovieNote({
 }) {
   return (
     <Container {...rest}>
-      <Link to={route}>
+      <Link to={`/preview/${route}`}>
         <div>
           <h2>{title}</h2>
           <Rating rating={rating} />

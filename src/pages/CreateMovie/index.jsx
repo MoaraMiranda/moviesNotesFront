@@ -26,7 +26,8 @@ export function CreateMovie() {
     setTags((prevState) => prevState.filter((tag) => tag !== deleted));
   }
 
-  async function handleNewMovie() {
+  async function handleNewMovie(e) {
+    e.preventDefault();
     if (!title) {
       return alert("Please add a title to your movie.");
     }
@@ -47,7 +48,7 @@ export function CreateMovie() {
       tags,
     });
     alert("Movie added successfully");
-    navigate(-1);
+    navigate("/");
   }
   return (
     <Container>
@@ -91,9 +92,7 @@ export function CreateMovie() {
                 />
               ))}
             </div>
-            <Button onClick={handleNewMovie}>
-              <button>Save your movie</button>
-            </Button>
+            <Button onClick={handleNewMovie}>Save your movie</Button>
           </Fieldset>
         </form>
       </main>

@@ -34,10 +34,6 @@ export const Container = styled.div`
       margin-bottom: 40px;
       font-size: 36px;
     }
-
-    button {
-      width: 30%;
-    }
   }
 `;
 
@@ -78,18 +74,16 @@ export const Fieldset = styled.fieldset`
   }
 `;
 
-export const Button = styled.div`
+export const Button = styled.button`
   display: flex;
-  justify-content: end;
-
-  > button {
-    font-size: 20px;
-    font-weight: 500;
-    padding: 12px;
-    width: 100%;
-    background-color: ${({ theme }) => theme.COLORS.PINK_300};
-    color: ${({ theme }) => theme.COLORS.GRAY_300};
-    border: none;
-    flex: 1;
-  }
+  flex: 1;
+  justify-content: center;
+  width: 100%;
+  height: 56px;
+  font-size: 20px;
+  font-weight: 500;
+  padding: 12px;
+  background-color: ${({ theme }) => theme.COLORS.PINK_300};
+  color: ${({ theme }) => theme.COLORS.GRAY_300};
+  border: none;
 `;

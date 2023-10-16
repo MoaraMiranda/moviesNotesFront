@@ -7,7 +7,11 @@ export function PageTitle({ title, children, button }) {
       <div>{children}</div>
 
       {button && (
-        <Button $bgPink={button.bgPink} to={button.route}>
+        <Button
+          $bgPink={button.bgPink}
+          to={button.route}
+          onClick={button.onClick}
+        >
           {button.Icon && <button.Icon size={14} />}
           {button.title}
         </Button>

@@ -43,7 +43,7 @@ export function Home() {
               rating={note.rating}
               description={note.description}
               tags={note.tags}
-              route="/preview/2"
+              route={note.id}
             />
           ))}
         </Content>
