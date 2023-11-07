@@ -6,7 +6,7 @@ import { Container, Textarea, Fieldset, Button } from "./styles";
 import { Header } from "../../components/Header";
 import { BackLink } from "../../components/BackLink";
 import { Input } from "../../components/Input";
-import { TagsController } from "../../components/TagsController";
+import { TagsController } from "../../components/Tagscontroller";
 import { PageTitle } from "../../components/PageTitle";
 
 export function CreateMovie() {
