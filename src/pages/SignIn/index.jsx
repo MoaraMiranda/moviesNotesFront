@@ -19,7 +19,7 @@ export function SignIn() {
     <Container>
       <Form>
         <div className="logo">
-          <h1>MovieMemos</h1>
+          <h1>MovieNotes</h1>
           <p>Take notes from your favorite movies</p>
         </div>
         <h2>Sign in here</h2>

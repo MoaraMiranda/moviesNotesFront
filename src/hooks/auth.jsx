@@ -10,8 +10,8 @@ function AuthProvider({ children }) {
       const response = await api.post("/sessions", { email, password });
       const { user, token } = response.data;
 
-      localStorage.setItem("@moviememos:user", JSON.stringify(user));
-      localStorage.setItem("@moviememos:token", token);
+      localStorage.setItem("@movienotes:user", JSON.stringify(user));
+      localStorage.setItem("@movienotes:token", token);
 
       api.defaults.headers.common["Authorization"] = `Bearer ${token}`;
       setData({ user, token });
@@ -25,8 +25,8 @@ function AuthProvider({ children }) {
   }
 
   function signOut() {
-    localStorage.removeItem("@moviememos:user");
-    localStorage.removeItem("@moviememos:token");
+    localStorage.removeItem("@movienotes:user");
+    localStorage.removeItem("@movienotes:token");
 
     setData({});
   }
@@ -41,7 +41,7 @@ function AuthProvider({ children }) {
       }
 
       await api.put("/users", user);
-      localStorage.setItem("@moviememos:user", JSON.stringify(user));
+      localStorage.setItem("@movienotes:user", JSON.stringify(user));
 
       setData({ user, token: data.token });
       alert("Profile updated successfully");
@@ -55,8 +55,8 @@ function AuthProvider({ children }) {
   }
 
   useEffect(() => {
-    const token = localStorage.getItem("@moviememos:token");
-    const user = localStorage.getItem("@moviememos:user");
+    const token = localStorage.getItem("@movienotes:token");
+    const user = localStorage.getItem("@movienotes:user");
 
     if (token && user) {
       api.defaults.headers.common["Authorization"] = `Bearer ${token}`;

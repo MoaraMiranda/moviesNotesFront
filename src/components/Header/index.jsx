@@ -17,7 +17,7 @@ export function Header() {
   const { signOut, user } = useAuth();
 
   function handleSignOut(e) {
-    e.preventDefault()
+    e.preventDefault();
     navigate("/");
     signOut();
   }
@@ -33,7 +33,7 @@ export function Header() {
   return (
     <Container>
       <Brand to="/">
-        <h1>MovieMemos</h1>
+        <h1>MovieNotes</h1>
       </Brand>
       <form onSubmit={handleSearch}>
         <Input
