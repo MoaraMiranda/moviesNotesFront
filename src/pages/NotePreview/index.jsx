@@ -9,6 +9,8 @@ import { PageTitle } from "../../components/PageTitle";
 import { TagsGroup } from "../../components/TagsGroup";
 import { Rating } from "../../components/Rating";
 import { useAuth } from "../../hooks/auth";
+import avatarPlaceholder from "../../assets/avatarPlaceholder.png";
+
 import dayjs from "dayjs";
 
 export function NotePreview() {

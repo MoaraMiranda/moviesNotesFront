@@ -15,6 +15,7 @@ export const Container = styled.div`
     border: none;
     background: none;
     text-align: center;
+    padding-right: 12px;
 
     svg {
       color: ${({ theme }) => theme.COLORS.PINK_300};
